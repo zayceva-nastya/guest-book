@@ -67,7 +67,7 @@
   $mysqli->close();
   ?>
   <br>
-  <form action="?" method="post">
+  <form action="gb.php" method="post">
     <textarea name="text"></textarea>
     <input type="text" name="name">
     <input type="submit">
