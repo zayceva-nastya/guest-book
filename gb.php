@@ -8,6 +8,6 @@ include 'connect.php';
         "INSERT INTO `gbook` VALUES (null, '$_POST[text]', '$_POST[name]')"
         );
     }
-   header('location:form.php');
+   header('location:index.php');
     ?>
     
