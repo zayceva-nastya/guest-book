@@ -53,9 +53,9 @@
         "</div>" . "<b>" . bb_code(smile($row->text)) .
         " </b><i>\n" . $row->name . "</i><br>\n";
     }
-    echo "<a index.php'>1</a>\t\n";
+    echo "<a href='index.php'>1</a>\t\n";
     for ($i = $count, $c = 2; $i < $a[0],$c<=$number; $i = $i + $count, $c++) {
-      echo "<a index.php?p=$i'>$c</a>\t\n";
+      echo "<a href='index.php?p=$i'>$c</a>\t\n";
     }
   }
 
