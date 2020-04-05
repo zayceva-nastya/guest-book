@@ -39,10 +39,10 @@
         " </b><i>" . $row->name . "</i><br>\n";
     }
 
-    echo "<a href='http://gb/index.php'>1</a>\t\n";
+    echo "<a href='index.php'>1</a>\t\n";
     for ($i = 20, $c = 2; $i < $a[0],$c<=$number; $i = $i + $count, $c++) {
 
-      echo "<a href='http://gb/index.php?p=$i'>$c</a>\t";
+      echo "<a href='index.php?p=$i'>$c</a>\t";
     }
   } else {
        $result = $mysqli->query("Select * From gbook Order by id DESC limit $_GET[p], $count");
@@ -53,9 +53,9 @@
         "</div>" . "<b>" . bb_code(smile($row->text)) .
         " </b><i>\n" . $row->name . "</i><br>\n";
     }
-    echo "<a href='http://gb/index.php'>1</a>\t\n";
+    echo "<a index.php'>1</a>\t\n";
     for ($i = $count, $c = 2; $i < $a[0],$c<=$number; $i = $i + $count, $c++) {
-      echo "<a href='http://gb/index.php?p=$i'>$c</a>\t\n";
+      echo "<a index.php?p=$i'>$c</a>\t\n";
     }
   }
 
