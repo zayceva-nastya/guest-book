@@ -16,6 +16,13 @@
   include 'fun.php';
   include 'connect.php';
 
+  $mysqli = new mysqli(
+    'remotemysql.com',
+    'R9rH7eFGck',
+    'a4YE3DiL5g',
+    'R9rH7eFGck'
+);
+
   $result = $mysqli->query('Select count(*) from gbook');
   $a = $result->fetch_array();
 
@@ -25,6 +32,12 @@
   $number = ceil($a[0] / $count); //колличество страниц
 
 
+  if (!empty($_POST['text']) && !empty($_POST['name'])) {
+
+    $mysqli->query(
+    "INSERT INTO `gbook` VALUES (null, '$_POST[text]', '$_POST[name]')"
+    );
+}
 
   echo "<br>";
 
@@ -65,7 +78,7 @@
   $mysqli->close();
   ?>
   <br>
-  <form action="gb.php" method="post">
+  <form action="?" method="post">
     <textarea name="text"></textarea>
     <input type="text" name="name">
     <input type="submit">
