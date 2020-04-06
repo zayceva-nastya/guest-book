@@ -16,5 +16,5 @@
     'a4YE3DiL5g',
     'R9rH7eFGck'
 );
-$count=20;
+$count=10;
 ?>
