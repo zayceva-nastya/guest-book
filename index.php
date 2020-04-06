@@ -17,17 +17,10 @@
   include 'fun.php';
   include 'connect.php';
 
-
-
   $result = $mysqli->query('Select count(*) from gbook');
   $a = $result->fetch_array();
 
-
-  // $count = 50; // колличество записей на странице
-
   $number = ceil($a[0] / $count); //колличество страниц
-
-
 
   echo "<br>";
 
