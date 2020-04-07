@@ -44,7 +44,7 @@
   for ($i = $count, $c = 2; $i < $a[0], $c <= $number; $i = $i + $count, $c++) {
     echo "<a href='page.php?p=$i&page=$c'>$c</a>\t\n";
   }
-  echo "</div>";
+      echo "</div>";
   $result->free();
 
   $mysqli->close();
