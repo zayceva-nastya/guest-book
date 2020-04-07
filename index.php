@@ -17,6 +17,7 @@
   include 'fun.php';
   include 'connect.php';
 
+
   $result = $mysqli->query('Select count(*) from gbook');
   $a = $result->fetch_array();
 
@@ -24,7 +25,7 @@
 
   echo "<br>";
 
-  if (!$_GET) {
+  
     $result = $mysqli->query("Select * From gbook Order by id DESC limit  $count");
 
     echo "Эта таблица содержит\t" . $a[0] . "\tстрок<br>";
@@ -33,24 +34,25 @@
     echo "<hr>";
     echo "<td>№</td>";
     echo "<td>Name</td>";
-    echo "<td>Text</td>";
+    echo "<td>Text</td></hr>\n";
     while ($row = $result->fetch_object()) {
 
       echo "<tr>";
       echo "<td>" .  $row->id . "</td>";
       echo "<td>" . $row->name . "</td>";
-      echo "<td>" . bb_code(smile($row->text)) . "</td>";
+      echo "<td>" . bb_code(smile($row->text)) . "</td>\n";
       echo "</tr>";
     }
     echo "</table>\n";
 
     echo "<div class='mt-3'>";
     echo "<a href='index.php'>1</a>\t\n";
-    for ($i = 20, $c = 2; $i < $a[0], $c <= $number; $i = $i + $count, $c++) {
+    for ($i = $count, $c = 2; $i < $a[0], $c <= $number; $i = $i + $count, $c++) {
 
       echo "<a href='page.php?p=$i&page=$c'>$c</a>\t";
     }
-  }
+
+  
 
   echo "</div>";
   $result->free();
