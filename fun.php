@@ -83,3 +83,22 @@ function urls($text)
     ];
     return preg_replace($pat, $url, $text);
 }
+
+function ban($text)
+{
+
+    return (preg_match("/дурак|идиот/iu", $text)) ?  false: true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
