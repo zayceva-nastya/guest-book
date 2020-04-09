@@ -62,7 +62,7 @@ if (!isset($_SESSION['time'])) {
 if (isset($_SESSION['time'])) {
     $time=(time()-$_SESSION['time']);
 }
-echo "Вы находитесь на этой странице\n".$time."s\t"."(".ceil($time/60)."мин)"." <br>";
+echo "Вы находитесь на этой странице\n".$time."s"." <br>";
 
 if (!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 1;
