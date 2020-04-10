@@ -60,7 +60,8 @@ if (!isset($_SESSION['time'])) {
 
 
 if (isset($_SESSION['time'])) {
-    $time=(time()-$_SESSION['time']);
+    // $time=(time()-$_SESSION['time']);
+    $time=(time()-$_COOKIE['time']);
 }
 echo "Вы находитесь на этой странице\n".$time."s"." <br>";
 
