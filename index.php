@@ -60,8 +60,8 @@ if (!isset($_SESSION['time'])) {
 
 
 if (isset($_SESSION['time'])) {
-    // $time=(time()-$_SESSION['time']);
-    $time=(time()-$_COOKIE['time']);
+    $time=(time()-$_SESSION['time']);
+    // $time=(time()-$_COOKIE['time']);
 }
 
 $hour = floor($time/3600);
