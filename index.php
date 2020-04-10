@@ -63,7 +63,12 @@ if (isset($_SESSION['time'])) {
     // $time=(time()-$_SESSION['time']);
     $time=(time()-$_COOKIE['time']);
 }
-echo "Вы находитесь на этой странице\n".$time."s"." <br>";
+
+$hour = floor($time/3600);
+$sec = $time - ($hour*3600);
+$min = floor($sec/60);
+$sec = $sec - ($min*60);
+echo "Вы находитесь на этой странице\n".$hour."ч".$min."min".$sec." <br>";
 
 if (!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 1;
