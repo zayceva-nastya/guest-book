@@ -56,7 +56,7 @@ if (!isset($_SESSION['time'])) {
     $_SESSION['time'] = time();
   
 }
-echo "Время первого посещения:\n". date("m.d.y H:i:s", $_SESSION['time'])."<br>";
+//echo "Время первого посещения:\n". date("m.d.y H:i:s", $_SESSION['time'])."<br>";
 
 
 if (isset($_SESSION['time'])) {
