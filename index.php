@@ -64,11 +64,9 @@ if (isset($_SESSION['time'])) {
     // $time=(time()-$_COOKIE['time']);
 }
 
-$hour = floor($time/3600);
-$sec = $time - ($hour*3600);
-$min = floor($sec/60);
-$sec = $sec - ($min*60);
-echo "Вы находитесь на этой странице\n".$hour."ч".$min."min".$sec." <br>";
+
+echo "Вы находитесь на этой странице\n". 
+sprintf('%02d:%02d:%02d', $time/3600, ($time % 3600)/60, ($time % 3600) % 60)."<br>";
 
 if (!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 1;
